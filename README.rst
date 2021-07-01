@@ -1,8 +1,8 @@
 
 #################################
 Horoscope API - DivineAPI
-#################################https://github.com/DivineAPI/horoscope-api/blob/main/README.rst
-Start your FREE Trail to get your API KEY,  `https://divineapi.com <https://divineapi.com>`_
+#################################
+Start your FREE Trial to get your API KEY,  `https://divineapi.com <https://divineapi.com>`_
 
 |travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
