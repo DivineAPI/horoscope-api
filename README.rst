@@ -83,7 +83,7 @@ cURL
 ^^^^
 .. code-block:: curl
 
-    curl -d "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries" -X POST https://divineapi.com/api/1.0/get_daily_horoscope.php
+    curl -d "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries" -X POST https://divineapi.com/api/1.0/get_daily_horoscope.php
 
 
 Python
@@ -123,32 +123,29 @@ Node.js
 PHP
 ^^^
 .. code-block:: php
+<?php
 
-    <?php
+   $url = "https://divineapi.com/api/1.0/get_daily_horoscope.php";
 
-        //This function can be used in any PHP framework like laravel, wordpress, drupal, cakephp etc.
+   $curl = curl_init($url);
+   curl_setopt($curl, CURLOPT_URL, $url);
+   curl_setopt($curl, CURLOPT_POST, true);
+   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-        function api_call($sign, $day) {
-            $api_call = curl_init('https://divineapi.com/api/1.0/get_daily_horoscope.php?sign='.$sign.'&day='.$day);
-            curl_setopt_array($api_call, array(
-                CURLOPT_POST => TRUE,
-                CURLOPT_RETURNTRANSFER => TRUE,
-                CURLOPT_HTTPHEADER => array(
-                    'Content-Type: application/json'
-                )
-            ));
-            $response = curl_exec($api_call);
-            if($response === FALSE){
-                die(curl_error($api_call));
-            }
-            $responseData = json_decode($response, TRUE);
-            return $responseData;
-        }
+   $headers = array(
+      "Content-Type: application/x-www-form-urlencoded",
+   );
+   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-        $ObjData = api_call('aries', 'today');
-        var_dump($ObjData);
+   $data = "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries";
 
-    ?>
+   curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+
+   $resp = curl_exec($curl);
+   curl_close($curl);
+   var_dump($resp);
+
+?>
     
     
 jQuery Ajax
