@@ -1,6 +1,6 @@
 
 #################################
-aztro - The astrology API 
+DivineAPI - The astrology API 
 #################################
  Free and open API. Needs no authentication
 |Travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
@@ -49,7 +49,7 @@ Usage
 =====
 .. code-block:: text
 
-    POST: https://aztro.sameerkumar.website?sign= <sign> &day= <day>
+    POST: https://divineapi.com/api/1.0/get_daily_horoscope.php?sign= <sign> &day= <day>
 
 
 Example 
@@ -62,7 +62,7 @@ cURL
 .. code-block:: python
 
     curl -X POST \
-    'https://aztro.sameerkumar.website/?sign=aries&day=today'
+    'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today'
 
 
 Python
@@ -76,7 +76,7 @@ Python
     ('day', 'today'),
     )
 
-    requests.post('https://aztro.sameerkumar.website/', params=params)
+    requests.post('https://divineapi.com/api/1.0/get_daily_horoscope.php/', params=params)
 
 
 Node.js
@@ -86,7 +86,7 @@ Node.js
     var request = require('request');
 
     var options = {
-    url: 'https://aztro.sameerkumar.website/?sign=aries&day=today',
+    url: 'https://divineapi.com/api/1.0/get_daily_horoscope.php',
     method: 'POST'
     };
 
@@ -107,24 +107,24 @@ PHP
 
         //This function can be used in any PHP framework like laravel, wordpress, drupal, cakephp etc.
 
-        function aztro($sign, $day) {
-            $aztro = curl_init('https://aztro.sameerkumar.website/?sign='.$sign.'&day='.$day);
-            curl_setopt_array($aztro, array(
+        function api_call($sign, $day) {
+            $api_call = curl_init('https://divineapi.com/api/1.0/get_daily_horoscope.php?sign='.$sign.'&day='.$day);
+            curl_setopt_array($api_call, array(
                 CURLOPT_POST => TRUE,
                 CURLOPT_RETURNTRANSFER => TRUE,
                 CURLOPT_HTTPHEADER => array(
                     'Content-Type: application/json'
                 )
             ));
-            $response = curl_exec($aztro);
+            $response = curl_exec($api_call);
             if($response === FALSE){
-                die(curl_error($aztro));
+                die(curl_error($api_call));
             }
             $responseData = json_decode($response, TRUE);
             return $responseData;
         }
 
-        $ObjData = aztro('aries', 'today');
+        $ObjData = api_call('aries', 'today');
         var_dump($ObjData);
 
     ?>
@@ -136,7 +136,7 @@ jQuery Ajax
 
     $.ajax({
    type:'POST',
-   url:'https://aztro.sameerkumar.website?sign=aries&day=today',
+   url:'https://divineapi.com/api/1.0/get_daily_horoscope.php',
    success:function(data){
    console.log(data);
    }
@@ -147,7 +147,7 @@ ECMAScript (ES6)
 ^^^^^^
 .. code-block:: javascript
 
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
     fetch(URL, {
         method: 'POST'
     })
@@ -162,7 +162,7 @@ Vue.JS using axios
 ^^^^^^^^^^^^^^^^^^
 .. code-block:: html
 
-    <ul id="aztro">
+    <ul id="divine">
         <li>Current Date: {{data.current_date}}</li>
         <li>Compatibility: {{data.compatibility}}</li>
         <li>Lucky Number: {{data.lucky_number}}</li>
@@ -175,9 +175,9 @@ Vue.JS using axios
 
 .. code-block:: javascript
 
-    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
     new Vue({
-        el: '#aztro',
+        el: '#api',
         data() {
                 return {
                 data: {}
@@ -197,7 +197,7 @@ ReactJS with ES6
     
     import React, { Component } from 'react';
 
-    class Aztro extends Component {
+    class Horoscope extends Component {
         constructor(props){
             super(props);
             this.state = {
@@ -206,7 +206,7 @@ ReactJS with ES6
         }
         
         componentDidMount () {
-            const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+            const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
             fetch(URL, {
                 method: 'POST'
             }).then(response => response.json())
@@ -229,7 +229,7 @@ ReactJS with ES6
         }
     }
 
-    export default Aztro;
+    export default Horoscope;
 
 
 Response
@@ -250,7 +250,7 @@ Tests
     pip install nose
     nosetests tests
 
-Projects using aztro API
+Projects using Divine API
 ========================
 
 .. raw:: html
@@ -282,7 +282,7 @@ Projects using aztro API
     </table>
 
 
-Used aztro API in your project? Check out the `contributing guidelines <https://github.com/sameerkumar18/aztro/blob/master/contributing.md>`_ for this list and let us know. we love PRs :)
+Used Divine API in your project? Check out the `contributing guidelines <https://github.com/sameerkumar18/aztro/blob/master/contributing.md>`_ for this list and let us know. we love PRs :)
 
 
 API Wrappers
