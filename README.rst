@@ -199,7 +199,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 Contact
 =======
 
-Questions? Suggestions? Feel free to contact me at https://azhar-spiderdev.github.io/
+Questions? Suggestions? Feel free to contact me at https://github.com/DivineAPI/horoscope-api/
 
 
 Buy me a coffee 🥤
