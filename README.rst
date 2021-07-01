@@ -2,7 +2,7 @@
 #################################
 DivineAPI - The astrology API 
 #################################
-Register now to get your API KEY,  `DivineAPI <https://divineapi.com>`_.
+Register now to get your API KEY,  `DivineAPI <https://divineapi.com>`_
 
 |travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
