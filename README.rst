@@ -84,7 +84,7 @@ cURL
 ^^^^
 .. code-block:: curl
 
-    curl -d "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries" -X POST https://divineapi.com/api/1.0/get_daily_horoscope.php
+    curl -d "api_key=YOUR_API_KEY&date=YYYY-MM-DD&sign=aries" -X POST https://divineapi.com/api/1.0/get_daily_horoscope.php
 
 
 Python
@@ -99,7 +99,7 @@ Python
    headers = CaseInsensitiveDict()
    headers["Content-Type"] = "application/x-www-form-urlencoded"
 
-   data = "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries"
+   data = "api_key=YOUR_API_KEY&date=YYYY-MM-DD&sign=aries"
 
 
    resp = requests.post(url, headers=headers, data=data)
@@ -124,7 +124,7 @@ Javascript
          console.log(xhr.responseText);
       }};
 
-   var data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
+   var data = "api_key=YOUR_API_KEY&date=YYYY-MM-DD&sign=aries";
 
    xhr.send(data);
 
@@ -146,7 +146,7 @@ PHP
     );
     curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-    $data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
+    $data = "api_key=YOUR_API_KEY&date=YYYY-MM-DD&sign=aries";
 
     curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
@@ -163,7 +163,7 @@ jQuery Ajax
     $.ajax({
    type:'POST',
    url:'https://divineapi.com/api/1.0/get_daily_horoscope.php',
-   data: {api_key:'YOUR_API_KEY', date: 'yyyy-mm-dd', sign:'aries'},
+   data: {api_key:'YOUR_API_KEY', date: 'YYYY-MM-DD', sign:'aries'},
    success:function(data){
    console.log(data);
    }
