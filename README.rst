@@ -207,15 +207,6 @@ Contact
 Questions? Suggestions? Feel free to contact me at https://github.com/DivineAPI/horoscope-api/
 
 
-Buy me a coffee 🥤
-=====================
-
-If this project helped you reduce the development time, please consider donating :) 
-
-.. image:: https://i.giphy.com/media/513lZvPf6khjIQFibF/giphy.webp
-    :target: https://azhar-spiderdev.github.io/portfolio
-
-
 Credits
 =======
 
