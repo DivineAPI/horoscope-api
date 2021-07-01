@@ -1,8 +1,8 @@
 
 #################################
-DivineAPI - The astrology API 
+DivineAPI - Horoscope API 
 #################################
-Register now to get your API KEY,  `DivineAPI <https://divineapi.com>`_
+Start your FREE Trail to get your API KEY,  `https://divineapi.com <https://divineapi.com>`_
 
 |travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
