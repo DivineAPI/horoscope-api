@@ -185,55 +185,10 @@ ECMAScript (ES6)
     });
 
 
-
-
-Projects using Divine API
-========================
-
-.. raw:: html
-
-   <table> 
-    <tr>
-      <th>Repository</th>
-      <th>Description</th>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/Bratanov/community-driven-radio">Community Driven Radio</a>
-      </td>
-      <td>A radio station driven by the community</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/andreslopezrm/WatchOS_Swift_Horoscope">Horoscope Apple Watch App</a>
-      </td>
-      <td>Apple Watch Application for Horoscope</td>
-    </tr>
-    <tr>
-      <td>
-        <a href="https://github.com/sergeKashkin/daily_scope">Your Daily Horoscope</a>
-      </td>
-      <td>React app which shows your daily horoscope</td>
-    </tr>
-    
-    </table>
-
-
-Used Divine API in your project? Check out the `contributing guidelines <https://github.com/sameerkumar18/aztro/blob/master/contributing.md>`_ for this list and let us know. we love PRs :)
-
-
-API Wrappers
-============
-
-For Python - `PyAztro <https://github.com/sameerkumar18/pyaztro>`_ (pip install pyaztro)
-
-For NodeJS - `aztro-js <https://github.com/srijitcoder/aztro-js>`_ (npm install aztro-js)
-
-
 License
 =======
 
-2021 Sameer Kumar
+2021 Mohammad Azhar
 
 Licensed under the Apache License, Version 2.0 (the "License");
 
@@ -244,7 +199,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 Contact
 =======
 
-Questions? Suggestions? Feel free to contact me at sam+aztro-ghreadme@sameerkumar.website
+Questions? Suggestions? Feel free to contact me at https://azhar-spiderdev.github.io/
 
 
 Buy me a coffee 🥤
@@ -259,25 +214,25 @@ If this project helped you reduce the development time, please consider donating
 Credits
 =======
 
-"aztro" was created by `Sameer Kumar <https://sameerkumar.website>`_ and these awesome individual `contributors <https://github.com/sameerkumar18/aztro/graphs/contributors>`_
+"DivineAPI" was created by `Azhar <https://azhar-spiderdev.github.io/>`_
 
-Source of horoscope updates - http://astrology.kudosmedia.net/
+Source of horoscope updates - http://divineapi.com/horoscope-api/
 
 Please feel free to use and adapt this small API.
 
     
 .. |Docs| image:: https://readthedocs.org/projects/aztro/badge/?version=latest
-    :target: https://aztro.readthedocs.io/en/latest/?badge=latest
+    :target: https://azhar-spiderdev.github.io/
     
 .. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
-   :target: https://gitHub.com/sameerkumar18/pyaztro
+   :target: https://azhar-spiderdev.github.io/
 
 
 .. |Travis| image:: https://travis-ci.org/sameerkumar18/aztro.svg?branch=master
-    :target: https://travis-ci.org/sameerkumar18/aztro
+    :target: https://azhar-spiderdev.github.io/
 
 .. |SayThanks| image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
-    :target: https://saythanks.io/to/sameer18051998%40gmail.com
+    :target: https://azhar-spiderdev.github.io/
 
 .. |Paypal| image:: https://img.shields.io/badge/Paypal-Donate-blue.svg
     :target: https://www.buymeacoffee.com/sameerkumar
