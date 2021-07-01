@@ -42,6 +42,7 @@ sign :
 
 date : 
    Current Date in Y-m-d Format (Ex: 2020-12-25)
+   
    Date can be today,tomorrow or yesterday
 
 
@@ -49,7 +50,7 @@ Result Example:
 =====
 .. code-block:: text
 
-        {
+    {
         "success": 1,
         "message": "Prediction data.",
         "data": {
