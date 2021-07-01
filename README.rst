@@ -214,7 +214,7 @@ Credits
 
 Source of horoscope updates - http://divineapi.com/horoscope-api/
 
-Please feel free to use and adapt this small API.
+Please feel free to use and adapt this awesome API.
 
     
 .. |Docs| image:: https://readthedocs.org/projects/aztro/badge/?version=latest
@@ -231,7 +231,7 @@ Please feel free to use and adapt this small API.
     :target: https://azhar-spiderdev.github.io/
 
 .. |Paypal| image:: https://img.shields.io/badge/Paypal-Donate-blue.svg
-    :target: https://www.buymeacoffee.com/sameerkumar
+    :target: https://azhar-spiderdev.github.io/
 
 .. Indices and tables
 .. ==================
