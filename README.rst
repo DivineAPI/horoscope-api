@@ -90,14 +90,20 @@ Python
 ^^^^^^
 .. code-block:: python
 
-    import requests
+   import requests
+   from requests.structures import CaseInsensitiveDict
 
-    params = (
-    ('sign', 'aries'),
-    ('day', 'today'),
-    )
+   url = "https://divineapi.com/api/1.0/get_daily_horoscope.php"
 
-    requests.post('https://divineapi.com/api/1.0/get_daily_horoscope.php/', params=params)
+   headers = CaseInsensitiveDict()
+   headers["Content-Type"] = "application/x-www-form-urlencoded"
+
+   data = "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries"
+
+
+   resp = requests.post(url, headers=headers, data=data)
+
+   print(resp.status_code)
 
 
 Node.js
@@ -125,25 +131,25 @@ PHP
 .. code-block:: php
 
    <?php
-   $url = "https://divineapi.com/api/1.0/get_daily_horoscope.php";
+    $url = "https://divineapi.com/api/1.0/get_daily_horoscope.php";
 
-   $curl = curl_init($url);
-   curl_setopt($curl, CURLOPT_URL, $url);
-   curl_setopt($curl, CURLOPT_POST, true);
-   curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    $curl = curl_init($url);
+    curl_setopt($curl, CURLOPT_URL, $url);
+    curl_setopt($curl, CURLOPT_POST, true);
+    curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
 
-   $headers = array(
-      "Content-Type: application/x-www-form-urlencoded",
-   );
-   curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
+    $headers = array(
+       "Content-Type: application/x-www-form-urlencoded",
+    );
+    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-   $data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
+    $data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
 
-   curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
+    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
-   $resp = curl_exec($curl);
-   curl_close($curl);
-   var_dump($resp);
+    $resp = curl_exec($curl);
+    curl_close($curl);
+    var_dump($resp);
    ?>
     
     
