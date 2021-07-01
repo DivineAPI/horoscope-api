@@ -2,8 +2,8 @@
 #################################
 DivineAPI - The astrology API 
 #################################
- Free and open API. Needs no authentication
-|Travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
+Register now to get your API KEY
+|DivineAPI| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
     
 .. image:: https://divineapi.com/assets/images/logo.svg
@@ -182,17 +182,6 @@ ECMAScript (ES6)
         const date = json.current_date;
         console.log(date);
     });
-
-
-Response
-^^^^^^^^
-.. code-block:: json
-
-    {"current_date": "June 23, 2017", "compatibility": " Cancer", "lucky_time": " 7am",
-     "lucky_number": " 64", "color": " Spring Green", "date_range": "Mar 21 - Apr 20",
-     "mood": " Relaxed", "description": "It's finally time for you to think about just
-      one thing: what makes you happy. Fortunately, that happens to be a person who feels
-      the same way. Give yourself the evening off. Refuse to be put in charge of anything."}
 
 
 
