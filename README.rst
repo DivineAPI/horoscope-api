@@ -6,30 +6,30 @@ aztro - The astrology API
 |Travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
     
-.. image:: https://github.com/sameerkumar18/aztro/raw/master/aztro-bg.png
+.. image:: https://divineapi.com/assets/images/logo.svg
    :height: 412px
    :width: 898px
-   :alt: aztro api logo
+   :alt: divineapi logo
    :align: center
 
-What is aztro?
+What is divineAPI?
 ==============
-aztro REST API allows developers to access and integrate the functionality of aztro with other applications. The API retrieves daily horoscopes for yesterday, today, and tomorrow.
+Divine API allows developers to access and integrate the functionality of astrology with other applications. The API retrieves daily horoscopes for yesterday, today, and tomorrow.
 
-Feel free to contribute on `Github <http://github.com/sameerkumar18/aztro>`_.
-
-
+Feel free to contribute on `Github <http://github.com/divineapi/horoscope-api>`_.
 
 
-Why aztro?
+
+
+Why divineAPI?
 ==========
-aztro is for a developer who wants an API that provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc.
+Divine API is for a developer who wants an API that provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc.
 
 URL
 ===
 .. code-block:: python
 
-    POST: https://aztro.sameerkumar.website
+    POST: https://divineapi.com/api/1.0/get_daily_horoscope.php
 
 
 Parameters
@@ -40,8 +40,9 @@ sign :
    List of all signs - aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius and pisces.
 
 
-day : 
-   Day can be today,tomorrow or yesterday
+date : 
+   Current Date in Y-m-d Format (Ex: 2020-12-25)
+   Date can be today,tomorrow or yesterday
 
 
 Usage
