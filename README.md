@@ -2,15 +2,10 @@
 
 Horoscope API
 ======
-[![GitHub issues](https://img.shields.io/github/issues/tapaswenipathak/Horoscope-API.svg)](https://github.com/tapaswenipathak/Horoscope-API/issues)
-[![GitHub forks](https://img.shields.io/github/forks/tapaswenipathak/Horoscope-API.svg)](https://github.com/tapaswenipathak/Horoscope-API/network)
-[![GitHub stars](https://img.shields.io/github/stars/tapaswenipathak/Horoscope-API.svg)](https://github.com/tapaswenipathak/Horoscope-API/stargazers)
-[![GitHub license](https://img.shields.io/github/license/tapaswenipathak/Horoscope-API.svg)](https://github.com/tapaswenipathak/Horoscope-API/blob/master/License.md)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/tapaswenipathak/Horoscope-API.svg?label=Horoscope-API&style=social)](https://twitter.com/intent/tweet?text=Horoscope%20API:&url=https%3A%2F%2Fgithub.com%2Ftapaswenipathak%2FHoroscope-API)
 
 An API to extract horoscope.
 
-Please try - https://horoscopesapi.com which has a commercial license and more features.
+Please try - https://divineapi.com which has a commercial license and more features.
 
 ## Table of Contents
 
@@ -31,16 +26,16 @@ Please try - https://horoscopesapi.com which has a commercial license and more f
   * broken down into year, sunsign and horoscope.
 
 # API Usage
-### API Base URL: `http://horoscope-api.herokuapp.com/`
+### API Base URL: `http://divineapi.com/api/1.0/get_daily_horoscope.php`
 
 Result :
 ```json
 {
-  "author": "Tapasweni Pathak", 
-  "author_url": "http://tapasweni-pathak.github.io/", 
-  "base_url": "horoscope-api.herokuapp.com", 
+  "author": "Mohammad Azhar", 
+  "author_url": "https://azhar-spiderdev.github.io/", 
+  "base_url": "divineapi.com", 
   "project_name": "Horoscope API", 
-  "project_url": "http://tapasweni-pathak.github.io/Horoscope-API"
+  "project_url": "https://github.com/DivineAPI/horoscope-api/"
 }
 ```
 
