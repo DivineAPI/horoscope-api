@@ -204,7 +204,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 Contact
 =======
 
-Questions? Suggestions? Feel free to contact me at https://github.com/DivineAPI/horoscope-api/
+Questions? Suggestions? Feel free to contact me at admin@divineapi.com
 
 
 Credits
