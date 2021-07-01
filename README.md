@@ -30,13 +30,28 @@ Please try - https://divineapi.com which has a commercial license and more featu
 
 Result :
 ```json
-{
-  "author": "Mohammad Azhar", 
-  "author_url": "https://azhar-spiderdev.github.io/", 
-  "base_url": "divineapi.com", 
-  "project_name": "Horoscope API", 
-  "project_url": "https://github.com/DivineAPI/horoscope-api/"
-}
+    {
+        "success": 1,
+        "message": "Prediction data.",
+        "data": {
+            "sign": "ARIES",
+            "prediction": {
+                "personal": "Personal Life",
+                "health": "Health",
+                "profession": "Profession",
+                "emotions": "Emotions",
+                "travel": "Travel",
+                "luck": [
+                    "Colors of the day – Green, Pink",
+                    "Lucky Numbers of the day – 5, 9",
+                    "Lucky Alphabets you will be in sync with – B, D",
+                    "Cosmic Tip – Opinions do not define you.",
+                    "Tips for singles – Take pride in being perfectly imperfect. ",
+                    "Tips for couples – It is already yours, try to maintain that."
+                ]
+            }
+        }
+    }  
 ```
 
 ### GET: `/horoscope/today/<sunsign>`
