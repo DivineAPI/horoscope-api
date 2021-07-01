@@ -45,11 +45,32 @@ date :
    Date can be today,tomorrow or yesterday
 
 
-Usage
+Result Example:
 =====
 .. code-block:: text
 
-    POST: https://divineapi.com/api/1.0/get_daily_horoscope.php?sign= <sign> &day= <day>
+        {
+        "success": 1,
+        "message": "Prediction data.",
+        "data": {
+            "sign": "ARIES",
+            "prediction": {
+                "personal": "Personal Life",
+                "health": "Health",
+                "profession": "Profession",
+                "emotions": "Emotions",
+                "travel": "Travel",
+                "luck": [
+                    "Colors of the day – Green, Pink",
+                    "Lucky Numbers of the day – 5, 9",
+                    "Lucky Alphabets you will be in sync with – B, D",
+                    "Cosmic Tip – Opinions do not define you.",
+                    "Tips for singles – Take pride in being perfectly imperfect. ",
+                    "Tips for couples – It is already yours, try to maintain that."
+                ]
+            }
+        }
+    }
 
 
 Example 
