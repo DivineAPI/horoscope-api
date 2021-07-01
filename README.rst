@@ -106,24 +106,26 @@ Python
    print(resp.status_code)
 
 
-Node.js
+Javascript
 ^^^^^^^
 .. code-block:: javascript
 
-    var request = require('request');
+   var url = "https://divineapi.com/api/1.0/get_daily_horoscope.php";
 
-    var options = {
-    url: 'https://divineapi.com/api/1.0/get_daily_horoscope.php',
-    method: 'POST'
-    };
+   var xhr = new XMLHttpRequest();
+   xhr.open("POST", url);
 
-    function callback(error, response, body) {
-    if (!error && response.statusCode == 200) {
-        console.log(body);
-    }
-    }
+   xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
 
-    request(options, callback);
+   xhr.onreadystatechange = function () {
+      if (xhr.readyState === 4) {
+         console.log(xhr.status);
+         console.log(xhr.responseText);
+      }};
+
+   var data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
+
+   xhr.send(data);
 
 
 PHP
@@ -160,6 +162,7 @@ jQuery Ajax
     $.ajax({
    type:'POST',
    url:'https://divineapi.com/api/1.0/get_daily_horoscope.php',
+   data: {api_key:'YOUR_API_KEY', date: 'yyyy-mm-dd', sign:'aries'},
    success:function(data){
    console.log(data);
    }
@@ -170,7 +173,7 @@ ECMAScript (ES6)
 ^^^^^^
 .. code-block:: javascript
 
-    const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
+    const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?api_key=YOUR_API_KEY&sign=aries&day=YYYY-MM-DD';
     fetch(URL, {
         method: 'POST'
     })
@@ -179,80 +182,6 @@ ECMAScript (ES6)
         const date = json.current_date;
         console.log(date);
     });
-
-
-Vue.JS using axios
-^^^^^^^^^^^^^^^^^^
-.. code-block:: html
-
-    <ul id="divine">
-        <li>Current Date: {{data.current_date}}</li>
-        <li>Compatibility: {{data.compatibility}}</li>
-        <li>Lucky Number: {{data.lucky_number}}</li>
-        <li>Lucky Time: {{data.lucky_time}}</li>
-        <li>Color: {{data.color}}</li>
-        <li>Date Range: {{data.date_range}}</li> 
-        <li>Mood: {{data.mood}}</li>
-        <li>Description: {{data.description}}</li>
-    </ul>
-
-.. code-block:: javascript
-
-    const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
-    new Vue({
-        el: '#api',
-        data() {
-                return {
-                data: {}
-            }
-        },
-        created() {
-            axios.post(URL).then((response) => {
-                this.data = response.data
-            })
-        }
-    })
-
-
-ReactJS with ES6
-^^^^^^
-.. code-block:: jsx
-    
-    import React, { Component } from 'react';
-
-    class Horoscope extends Component {
-        constructor(props){
-            super(props);
-            this.state = {
-              json: {}
-            }
-        }
-        
-        componentDidMount () {
-            const URL = 'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today';
-            fetch(URL, {
-                method: 'POST'
-            }).then(response => response.json())
-            .then(json => { this.setState({json}); });
-        }
-        
-        render() {
-            return (
-              <div>
-                  Current Date: {this.state.json.current_date} <br />
-                  Compatibility: {this.state.json.compatibility} <br />
-                  Lucky Number: {this.state.json.lucky_number} <br />
-                  Lucky Time: {this.state.json.lucky_time} <br />
-                  Color: {this.state.json.color} <br />
-                  Date Range: {this.state.json.date_range} <br />
-                  Mood: {this.state.json.mood} <br />
-                  Description: {this.state.json.description} <br />
-              </div>
-            );
-        }
-    }
-
-    export default Horoscope;
 
 
 Response
@@ -266,12 +195,7 @@ Response
       the same way. Give yourself the evening off. Refuse to be put in charge of anything."}
 
 
-Tests
-=======
-.. code-block:: text
 
-    pip install nose
-    nosetests tests
 
 Projects using Divine API
 ========================
