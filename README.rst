@@ -137,7 +137,7 @@ PHP
    );
    curl_setopt($curl, CURLOPT_HTTPHEADER, $headers);
 
-   $data = "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries";
+   $data = "api_key=YOUR_API_KEY&date=2021-07-01&sign=aries";
 
    curl_setopt($curl, CURLOPT_POSTFIELDS, $data);
 
