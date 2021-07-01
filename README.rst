@@ -3,7 +3,7 @@
 DivineAPI - The astrology API 
 #################################
 Register now to get your API KEY
-|DivineAPI| |Docs| |Maintenance yes| |SayThanks| |Paypal|
+|travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
     
 .. image:: https://divineapi.com/assets/images/logo.svg
