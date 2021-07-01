@@ -1,127 +1,352 @@
-![](https://img.shields.io/badge/-Horoscope%20API-blueviolet.svg)
 
-Horoscope API
-======
+#################################
+aztro - The astrology API 
+#################################
+ Free and open API. Needs no authentication
+|Travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
+    
+    
+.. image:: https://github.com/sameerkumar18/aztro/raw/master/aztro-bg.png
+   :height: 412px
+   :width: 898px
+   :alt: aztro api logo
+   :align: center
 
-An API to extract horoscope.
+What is aztro?
+==============
+aztro REST API allows developers to access and integrate the functionality of aztro with other applications. The API retrieves daily horoscopes for yesterday, today, and tomorrow.
 
-Please try - https://divineapi.com which has a commercial license and more features.
+Feel free to contribute on `Github <http://github.com/sameerkumar18/aztro>`_.
 
-## Table of Contents
 
-* [Features](#features)
-* [Usage](#api-usage)
-* [Todo](#todo)
-* [Contributing](#contributing)
 
-# Features
 
-* Today's horoscope 
-  * broken down into date, sunsign and horoscope.
-* Weekly horoscope
-  * broken down into week, sunsign and horoscope.
-* Monthly horoscope
-  * broken down into month, sunsign and horoscope.
-* Yearly horoscope
-  * broken down into year, sunsign and horoscope.
+Why aztro?
+==========
+aztro is for a developer who wants an API that provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc.
 
-# API Usage
-### API Base URL: `http://divineapi.com/api/1.0/get_daily_horoscope.php`
+URL
+===
+.. code-block:: python
 
-Result :
-```json
-    {
-        "success": 1,
-        "message": "Prediction data.",
-        "data": {
-            "sign": "ARIES",
-            "prediction": {
-                "personal": "Personal Life",
-                "health": "Health",
-                "profession": "Profession",
-                "emotions": "Emotions",
-                "travel": "Travel",
-                "luck": [
-                    "Colors of the day – Green, Pink",
-                    "Lucky Numbers of the day – 5, 9",
-                    "Lucky Alphabets you will be in sync with – B, D",
-                    "Cosmic Tip – Opinions do not define you.",
-                    "Tips for singles – Take pride in being perfectly imperfect. ",
-                    "Tips for couples – It is already yours, try to maintain that."
-                ]
+    POST: https://aztro.sameerkumar.website
+
+
+Parameters
+==========
+sign : 
+   Name of the sign.
+
+   List of all signs - aries, taurus, gemini, cancer, leo, virgo, libra, scorpio, sagittarius, capricorn, aquarius and pisces.
+
+
+day : 
+   Day can be today,tomorrow or yesterday
+
+
+Usage
+=====
+.. code-block:: text
+
+    POST: https://aztro.sameerkumar.website?sign= <sign> &day= <day>
+
+
+Example 
+=======
+The following example is for sun sign aries - 
+
+
+cURL
+^^^^
+.. code-block:: python
+
+    curl -X POST \
+    'https://aztro.sameerkumar.website/?sign=aries&day=today'
+
+
+Python
+^^^^^^
+.. code-block:: python
+
+    import requests
+
+    params = (
+    ('sign', 'aries'),
+    ('day', 'today'),
+    )
+
+    requests.post('https://aztro.sameerkumar.website/', params=params)
+
+
+Node.js
+^^^^^^^
+.. code-block:: javascript
+
+    var request = require('request');
+
+    var options = {
+    url: 'https://aztro.sameerkumar.website/?sign=aries&day=today',
+    method: 'POST'
+    };
+
+    function callback(error, response, body) {
+    if (!error && response.statusCode == 200) {
+        console.log(body);
+    }
+    }
+
+    request(options, callback);
+
+
+PHP
+^^^
+.. code-block:: php
+
+    <?php
+
+        //This function can be used in any PHP framework like laravel, wordpress, drupal, cakephp etc.
+
+        function aztro($sign, $day) {
+            $aztro = curl_init('https://aztro.sameerkumar.website/?sign='.$sign.'&day='.$day);
+            curl_setopt_array($aztro, array(
+                CURLOPT_POST => TRUE,
+                CURLOPT_RETURNTRANSFER => TRUE,
+                CURLOPT_HTTPHEADER => array(
+                    'Content-Type: application/json'
+                )
+            ));
+            $response = curl_exec($aztro);
+            if($response === FALSE){
+                die(curl_error($aztro));
+            }
+            $responseData = json_decode($response, TRUE);
+            return $responseData;
+        }
+
+        $ObjData = aztro('aries', 'today');
+        var_dump($ObjData);
+
+    ?>
+    
+    
+jQuery Ajax
+^^^^^^
+.. code-block:: javascript
+
+    $.ajax({
+   type:'POST',
+   url:'https://aztro.sameerkumar.website?sign=aries&day=today',
+   success:function(data){
+   console.log(data);
+   }
+    });
+
+
+ECMAScript (ES6)
+^^^^^^
+.. code-block:: javascript
+
+    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    fetch(URL, {
+        method: 'POST'
+    })
+    .then(response => response.json())
+    .then(json => {
+        const date = json.current_date;
+        console.log(date);
+    });
+
+
+Vue.JS using axios
+^^^^^^^^^^^^^^^^^^
+.. code-block:: html
+
+    <ul id="aztro">
+        <li>Current Date: {{data.current_date}}</li>
+        <li>Compatibility: {{data.compatibility}}</li>
+        <li>Lucky Number: {{data.lucky_number}}</li>
+        <li>Lucky Time: {{data.lucky_time}}</li>
+        <li>Color: {{data.color}}</li>
+        <li>Date Range: {{data.date_range}}</li> 
+        <li>Mood: {{data.mood}}</li>
+        <li>Description: {{data.description}}</li>
+    </ul>
+
+.. code-block:: javascript
+
+    const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+    new Vue({
+        el: '#aztro',
+        data() {
+                return {
+                data: {}
+            }
+        },
+        created() {
+            axios.post(URL).then((response) => {
+                this.data = response.data
+            })
+        }
+    })
+
+
+ReactJS with ES6
+^^^^^^
+.. code-block:: jsx
+    
+    import React, { Component } from 'react';
+
+    class Aztro extends Component {
+        constructor(props){
+            super(props);
+            this.state = {
+              json: {}
             }
         }
-    }  
-```
+        
+        componentDidMount () {
+            const URL = 'https://aztro.sameerkumar.website/?sign=aries&day=today';
+            fetch(URL, {
+                method: 'POST'
+            }).then(response => response.json())
+            .then(json => { this.setState({json}); });
+        }
+        
+        render() {
+            return (
+              <div>
+                  Current Date: {this.state.json.current_date} <br />
+                  Compatibility: {this.state.json.compatibility} <br />
+                  Lucky Number: {this.state.json.lucky_number} <br />
+                  Lucky Time: {this.state.json.lucky_time} <br />
+                  Color: {this.state.json.color} <br />
+                  Date Range: {this.state.json.date_range} <br />
+                  Mood: {this.state.json.mood} <br />
+                  Description: {this.state.json.description} <br />
+              </div>
+            );
+        }
+    }
 
-### GET: `/horoscope/today/<sunsign>`
-#### Example
-Example usage: `GET http://horoscope-api.herokuapp.com/horoscope/today/Libra`
-
-Example result:
-```json
-{
-  "date": "04-09-2014", 
-  "horoscope": "It is very likely that you will arouse immense jealousy in others with your success and growth in business. Your business rivals may attempt to dent your credit worthiness in one way or the other. You may prefer to deal with them subtly rather than confront them openly, feels Ganesha.       Astro Profile  Uncover the real you, and see for yourself the cosmic map that Almighty has constructed for you. This specific arrangement of planets, the numbers and the stars at the time you were born makes you unique. Discover such aspects through the free Astro Profile report.      Get It Now!  ", 
-  "sunsign": "libra"
-}
-```
-
-### GET: `/horoscope/week/<sunsign>`
-#### Example
-Example usage: `GET http://horoscope-api.herokuapp.com/horoscope/week/libra`
-
-Output (excerpt):
-```json
-{
-  "horoscope": "  Be prepared to face a hectic week, says Ganesha. Things that were dormant shall now start gaining momentum. Your financial graph will gradually start going up. Things on both the personal and professional fronts are likely to become smoother. Your relations with your bosses shall improve. Boss and You! Finding difficulty to get along with your superior in your office, our expert astrologers can help you out. Get this report to get guidance from an astrological standpoint \u2013 as this report is based on your Natal Chart, it will be fully personalised for you. You shall be spending money on friends, but they shall return the favour by holding you in high regard and showering a lot of affection on you. This week, you shall also be able to earn through contacts and your reputation shall spread through word of mouth, fetching many assignments. This week is good for working with youngsters. That is to say, if you wish to impart training to the youngsters in your company or even in your family, this is the best week. Ganesha feels your approach towards social and personal issues shall be diplomatic.   Birth Horoscope Use the power of Astrology to understand yourself in a better way and get a sense of direction and purpose in life. The cosmic imprint of the stars has a profound impact on your life. Unravel your true potential through the Birth Horoscope report, being offered for free.      Get It Now! ", 
-  "sunsign": "libra", 
-  "week": "31-08-2014 \u2013 06-09-2014 "
-}
-```
-
-### GET: `/horoscope/month/<sunsign>`
-#### Example
-Example usage: `GET http://horoscope-api.herokuapp.com/horoscope/month/libra`
-
-Output (excerpt):
-```json
-{
-  "horoscope": "  Ganesha says brace up for a hectic month, as every aspect of your life shall keep you extremely busy. On the work front, your relations with seniors shall improve. As for work, you shall easily complete the projects assigned to you. Your social network and contacts shall matter a lot this month. You may also quit your job and start a business, to improve your financial condition. However, don\u2019t take any hasty decisions, cautions Ganesha. You are likely to be tempted to take some drastic steps to improve your finances. However, you should consult experts before undertaking anything risky. Also, start saving and chart out your investment plans. Over the course of the month, your finances shall improve gradually. Gains through investments in business are also indicated. To get some valuable tips on how to improve your financial condition even more, try the Birth Chart based report Wealth Ask a Question Detailed. As per Ganesha, your personal life may be fairly smooth this month, provided you are flexible and accommodating. Planetary positions indicate that your stubbornness may negatively affect your spouse and other members of your family.  Shani Dosha  Shani Dosha occurs when Saturn, the feared, mighty planet, is debilitated or occupies any of the Cardinal Houses (1, 4, 7, 10) in Aries, Cancer, Leo, or Scorpio or is Retrograde or Combust (by Sun) in those Houses (whatever be the Sign, except Libra, Capricorn and Aquarius) in a Horoscope. These planetary positions can cause troubles for you. Find out and deal well!    Get It Now! ", 
-  "month": "Sep 2014 ", 
-  "sunsign": "libra"
-}
-```
-
-### GET: `/horoscope/year/<sunsign>`
-Example usage: `GET http://horoscope-api.herokuapp.com/horoscope/year/libra`
- Output (excerpt):
- ```json
- {
-   "horoscope": "The planetary alignment indicate that you will have trouble controlling your temper during the year ahead. Be very careful of your words and actions as even petty issues may go out of hand in no time. As far as your love life is concerned, there will some ups and downs during year . Be unbiased and practical while sorting out issues with your beloved, else you will not be able to stop things from going bad to worse. This year, you need to be very clear about how you are going to handle your finances. According to Ganesha, you should pay special attention to your spendings and cash outflow. Whereas for your business, it may prove to be an excellent year. In all likelihood, you will come across lucrative business opportunities. The transiting Jupiter may bring you a favourable period on the career front in the form of a promotion or an increment. Well, be prepared to accept more responsibilities.",
-   "sunsign": "libra",
-   "year": "2014 "
-}
-```
-# Todo
-* Personality Profile
-* Facts About a Sunsign
-* Practical Side of a Sunsign
-* Astrological Perspective of a Sunsign
-
-# API Wrappers 
-* [Java Wrapper](https://github.com/TheBotBox/Horoscope-API) by [TheBotBox](https://github.com/TheBotBox/) 
-* [Flutter Wrapper](https://github.com/sumitgohil/flutter_horoscope) by [SumitGohil](https://github.com/sumitgohil/) 
-
-# Contributing
-Feel free to submit a pull request or an issue!
+    export default Aztro;
 
 
+Response
+^^^^^^^^
+.. code-block:: json
 
-#### Note 1 : This parses [GaneshaSpeaks](http://www.ganeshaspeaks.com/) unofficialy.  
+    {"current_date": "June 23, 2017", "compatibility": " Cancer", "lucky_time": " 7am",
+     "lucky_number": " 64", "color": " Spring Green", "date_range": "Mar 21 - Apr 20",
+     "mood": " Relaxed", "description": "It's finally time for you to think about just
+      one thing: what makes you happy. Fortunately, that happens to be a person who feels
+      the same way. Give yourself the evening off. Refuse to be put in charge of anything."}
 
-#### Note 2 : If the API goes down, please open a issue or comment on already existing one with the problem(s) that you are facing. This is the best way to let me know that the API is not working, avoid sending email. 
 
-#### Note 3 : You can also try - https://horoscopesapi.com which has a commercial license and more features.
+Tests
+=======
+.. code-block:: text
 
-[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/tapasweni-pathak/horoscope-api/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+    pip install nose
+    nosetests tests
+
+Projects using aztro API
+========================
+
+.. raw:: html
+
+   <table> 
+    <tr>
+      <th>Repository</th>
+      <th>Description</th>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/Bratanov/community-driven-radio">Community Driven Radio</a>
+      </td>
+      <td>A radio station driven by the community</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/andreslopezrm/WatchOS_Swift_Horoscope">Horoscope Apple Watch App</a>
+      </td>
+      <td>Apple Watch Application for Horoscope</td>
+    </tr>
+    <tr>
+      <td>
+        <a href="https://github.com/sergeKashkin/daily_scope">Your Daily Horoscope</a>
+      </td>
+      <td>React app which shows your daily horoscope</td>
+    </tr>
+    
+    </table>
+
+
+Used aztro API in your project? Check out the `contributing guidelines <https://github.com/sameerkumar18/aztro/blob/master/contributing.md>`_ for this list and let us know. we love PRs :)
+
+
+API Wrappers
+============
+
+For Python - `PyAztro <https://github.com/sameerkumar18/pyaztro>`_ (pip install pyaztro)
+
+For NodeJS - `aztro-js <https://github.com/srijitcoder/aztro-js>`_ (npm install aztro-js)
+
+
+License
+=======
+
+2021 Sameer Kumar
+
+Licensed under the Apache License, Version 2.0 (the "License");
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+
+
+Contact
+=======
+
+Questions? Suggestions? Feel free to contact me at sam+aztro-ghreadme@sameerkumar.website
+
+
+Buy me a coffee 🥤
+=====================
+
+If this project helped you reduce the development time, please consider donating :) 
+
+.. image:: https://i.giphy.com/media/513lZvPf6khjIQFibF/giphy.webp
+    :target: https://www.buymeacoffee.com/sameerkumar
+
+
+Credits
+=======
+
+"aztro" was created by `Sameer Kumar <https://sameerkumar.website>`_ and these awesome individual `contributors <https://github.com/sameerkumar18/aztro/graphs/contributors>`_
+
+Source of horoscope updates - http://astrology.kudosmedia.net/
+
+Please feel free to use and adapt this small API.
+
+    
+.. |Docs| image:: https://readthedocs.org/projects/aztro/badge/?version=latest
+    :target: https://aztro.readthedocs.io/en/latest/?badge=latest
+    
+.. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
+   :target: https://gitHub.com/sameerkumar18/pyaztro
+
+
+.. |Travis| image:: https://travis-ci.org/sameerkumar18/aztro.svg?branch=master
+    :target: https://travis-ci.org/sameerkumar18/aztro
+
+.. |SayThanks| image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
+    :target: https://saythanks.io/to/sameer18051998%40gmail.com
+
+.. |Paypal| image:: https://img.shields.io/badge/Paypal-Donate-blue.svg
+    :target: https://www.buymeacoffee.com/sameerkumar
+
+.. Indices and tables
+.. ==================
+
+.. * :ref:`genindex`
+.. * :ref:`modindex`
+.. * :ref:`search`
