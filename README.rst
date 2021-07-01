@@ -81,10 +81,9 @@ The following example is for sun sign aries -
 
 cURL
 ^^^^
-.. code-block:: python
+.. code-block:: curl
 
-    curl -X POST \
-    'https://divineapi.com/api/1.0/get_daily_horoscope.php?sign=aries&day=today'
+    curl -d "api_key=70efdf2ec9b086079795c442636b55fb&date=2021-07-01&sign=aries" -X POST https://divineapi.com/api/1.0/get_daily_horoscope.php
 
 
 Python
