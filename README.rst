@@ -13,18 +13,39 @@ Start your FREE Trial to get your API KEY,  `https://divineapi.com <https://divi
    :alt: divineapi logo
    :align: center
 
-What is divineAPI?
+What is Horoscope API?
 ==============
-Divine API allows developers to access and integrate the functionality of astrology with other applications. The API retrieves daily horoscopes for yesterday, today, and tomorrow.
+With divine API, developers can add astrology services to the desired apps. Divine API - Horoscope API gives user an option to view fortune related features of the present, previous and the coming days.
 
-Feel free to contribute on `Github <http://github.com/divineapi/horoscope-api>`_.
+..
+  Feel free to contribute on `Github <http://github.com/divineapi/horoscope-api>`_.
 
 
 
 
-Why divineAPI?
+Why Horoscope API?
 ==========
-Divine API is for a developer who wants an API that provides horoscope info for sun signs such as Lucky Number, Lucky Color, Mood, Color, Compatibility with other sun signs, description of a sign for that day etc.
+Divine API’s Horoscope API is best-in-class horoscope API services which let customers choose their own zodiac sign and reading through the 6 categories - Personal Life, Emotions, Profession, Health, Travel & Luck. With Data in the format of today, tomorrow and yesterday. 
+
+The divine API is for those who want to add astrology or horoscope related services to their websites. Divine API will let your customers peep into what they can expect from their personal, professional and social life everyday.
+
+Features
+==========
+
+- Horoscope API tells you about your profession in a given day.
+- It provides the users with health tips depending on their zodiac signs.
+- People will get to know what would their emotions bring to the surface.
+- Travel horoscope is an amazing feature provided to the user.
+- It gives all the users cosmic tips, tips to singles and couples.
+
+
+Benefits
+==========
+
+- It will tell you how your day is going to be.
+- The Horoscope API display what color and numbers are lucky for you in a given day.
+- Knowing that stars are in preferred position will help your confidence blossom.
+
 
 URL
 ===
@@ -210,7 +231,7 @@ Questions? Suggestions? Feel free to contact me at admin@divineapi.com
 Credits
 =======
 
-"DivineAPI" was created by `Azhar <https://azhar-spiderdev.github.io/>`_
+"DivineAPI" was created by `Azhar <https://azhar-spiderdev.github.io/portfolio>`_
 
 Source of horoscope updates - http://divineapi.com/horoscope-api/
 
