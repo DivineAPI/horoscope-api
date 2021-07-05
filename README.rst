@@ -214,7 +214,7 @@ ECMAScript (ES6)
 License
 =======
 
-2021 Mohammad Azhar
+2021 Divine API
 
 Licensed under the Apache License, Version 2.0 (the "License");
 
