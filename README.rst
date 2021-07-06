@@ -14,6 +14,7 @@ Start your FREE Trial to get your API KEY,  `https://divineapi.com <https://divi
    :alt: divineapi logo
    :align: center
 
+
 What is Horoscope API?
 ==============
 With divine API, developers can add astrology services to the desired apps. Divine API - Horoscope API gives user an option to view fortune related features of the present, previous and the coming days.
@@ -211,8 +212,11 @@ ECMAScript (ES6)
         console.log(date);
     });
 
+
+
 Services
 ========
+|Horoscope| |Daily Tarot| |Yes No Tarot| |Fortune Cookie| |Coffee Cup|
 
 
 
@@ -258,6 +262,23 @@ Please feel free to use and adapt this awesome API.
 
 .. |Paypal| image:: https://img.shields.io/badge/Other%20Services-%2311AB00.svg?&style=for-the-badge&logoColor=white
     :target: `Services`_
+    
+.. |Horoscope| image:: https://img.shields.io/badge/Daily%20Horoscope-cb22e6?style=for-the-badge&logoColor=white
+    :target: https://github.com/divineapi/horoscope-api
+
+
+.. |Daily Tarot| image:: https://img.shields.io/badge/Daily%20Tarot-cb22e6?style=for-the-badge&logoColor=white
+    :target: https://github.com/divineapi/daily-tarot
+    
+    
+.. |Yes No Tarot| image:: https://img.shields.io/badge/Yes%20Or%20No%20Tarot-cb22e6?style=for-the-badge&logoColor=white
+    :target: https://github.com/divineapi/yes-or-no-tarot
+    
+.. |Fortune Cookie| image:: https://img.shields.io/badge/Fortune%20Cookie-cb22e6?style=for-the-badge&logoColor=white
+    :target: https://github.com/divineapi/fortune-cookie
+    
+.. |Coffee Cup| image:: https://img.shields.io/badge/Coffee%20Cup-cb22e6?style=for-the-badge&logoColor=white
+    :target: https://github.com/divineapi/coffee-cup-reading
 
 .. Indices and tables
 .. ==================
