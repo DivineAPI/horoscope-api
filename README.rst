@@ -238,21 +238,21 @@ Source of horoscope updates - http://divineapi.com/horoscope-api/
 Please feel free to use and adapt this awesome API.
 
     
-.. |Docs| image:: https://readthedocs.org/projects/aztro/badge/?version=latest
-    :target: https://azhar-spiderdev.github.io/
+.. |Docs| image:: https://img.shields.io/badge/Test%20API-F96854?style=for-the-badge&logoColor=white
+    :target: https://rapidapi.com/divineapi/api/daily-horoscope3
     
-.. |Maintenance yes| image:: https://img.shields.io/badge/Maintained%3F-yes-green.svg
-   :target: https://azhar-spiderdev.github.io/
+.. |Maintenance yes| image:: https://img.shields.io/badge/Get%20Your%20API%20Key-cb22e6?style=for-the-badge&logoColor=white
+   :target: https://divineapi.com/register
 
 
-.. |Travis| image:: https://travis-ci.org/sameerkumar18/aztro.svg?branch=master
-    :target: https://azhar-spiderdev.github.io/
+.. |Travis| image:: https://img.shields.io/badge/7%20Days%20Free%20trial-%23039BE5.svg?&style=for-the-badge&logoColor=white
+    :target: https://divineapi.com/register
 
-.. |SayThanks| image:: https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg
-    :target: https://azhar-spiderdev.github.io/
+.. |SayThanks| image:: https://img.shields.io/badge/API%20Documentation-FCC624?style=for-the-badge&logoColor=white
+    :target: https://divineapi.com/api-doc
 
-.. |Paypal| image:: https://img.shields.io/badge/Paypal-Donate-blue.svg
-    :target: https://azhar-spiderdev.github.io/
+.. |Paypal| image:: https://img.shields.io/badge/Other%20Services-%2311AB00.svg?&style=for-the-badge&logoColor=white
+    :target: /#services
 
 .. Indices and tables
 .. ==================
