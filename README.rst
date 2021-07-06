@@ -252,7 +252,7 @@ Please feel free to use and adapt this awesome API.
     :target: https://divineapi.com/api-doc
 
 .. |Paypal| image:: https://img.shields.io/badge/Other%20Services-%2311AB00.svg?&style=for-the-badge&logoColor=white
-    :target: /#services
+    :target: https://github.com/DivineAPI/horoscope-api#services
 
 .. Indices and tables
 .. ==================
