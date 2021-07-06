@@ -6,9 +6,6 @@ Start your FREE Trial to get your API KEY,  `https://divineapi.com <https://divi
 
 |travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
-  
-  
-`Features`_
 
   
 .. image:: https://divineapi.com/assets/images/logo.svg
@@ -256,7 +253,7 @@ Please feel free to use and adapt this awesome API.
     :target: https://divineapi.com/api-doc
 
 .. |Paypal| image:: https://img.shields.io/badge/Other%20Services-%2311AB00.svg?&style=for-the-badge&logoColor=white
-    :target: https://github.com/DivineAPI/horoscope-api#services
+    :target: `Features`_
 
 .. Indices and tables
 .. ==================
