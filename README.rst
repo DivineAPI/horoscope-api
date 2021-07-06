@@ -33,10 +33,6 @@ The divine API is for those who want to add astrology or horoscope related servi
 
 
 
-* Features
-
-** Features
-
 Features
 ==========
 
