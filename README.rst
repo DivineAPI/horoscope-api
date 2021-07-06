@@ -6,7 +6,11 @@ Start your FREE Trial to get your API KEY,  `https://divineapi.com <https://divi
 
 |travis| |Docs| |Maintenance yes| |SayThanks| |Paypal|
     
-    
+  
+  
+`Features`_
+
+  
 .. image:: https://divineapi.com/assets/images/logo.svg
    :height: 412px
    :width: 898px
@@ -21,13 +25,17 @@ With divine API, developers can add astrology services to the desired apps. Divi
   Feel free to contribute on `Github <http://github.com/divineapi/horoscope-api>`_.
 
 
-
-
 Why Horoscope API?
 ==========
 Divine API’s Horoscope API is best-in-class horoscope API services which let customers choose their own zodiac sign and reading through the 6 categories - Personal Life, Emotions, Profession, Health, Travel & Luck. With Data in the format of today, tomorrow and yesterday. 
 
 The divine API is for those who want to add astrology or horoscope related services to their websites. Divine API will let your customers peep into what they can expect from their personal, professional and social life everyday.
+
+
+
+* Features
+
+** Features
 
 Features
 ==========
