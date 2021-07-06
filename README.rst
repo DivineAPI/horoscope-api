@@ -211,6 +211,10 @@ ECMAScript (ES6)
         console.log(date);
     });
 
+Services
+========
+
+
 
 License
 =======
@@ -253,7 +257,7 @@ Please feel free to use and adapt this awesome API.
     :target: https://divineapi.com/api-doc
 
 .. |Paypal| image:: https://img.shields.io/badge/Other%20Services-%2311AB00.svg?&style=for-the-badge&logoColor=white
-    :target: `Features`_
+    :target: `Services`_
 
 .. Indices and tables
 .. ==================
