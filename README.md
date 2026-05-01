@@ -20,7 +20,7 @@ The **Horoscope API** by DivineAPI is a curated suite of 6 REST endpoints that p
 
 Two extra endpoints extend your horoscope offering beyond Western astrology: a **Chinese Horoscope** (zodiac animal based on birth year) and a **Numerology Horoscope** (guidance derived from numerology numbers). All endpoints return plain JSON over HTTPS, support 25 languages, and work from any stack, no SDK required.
 
-Part of the broader [DivineAPI platform](https://github.com/DivineAPI/astrology-api) (200+ astrology, horoscope, tarot and numerology endpoints).
+Part of the broader [DivineAPI platform](https://github.com/DivineAPI/astrology-api) (300+ astrology, horoscope, tarot and numerology endpoints).
 
 ## Common use cases
 
