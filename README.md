@@ -335,7 +335,7 @@ Yes, and you should. A CDN or edge cache keyed by `(endpoint, sign, h_day, tzone
 All 12 Western tropical signs for daily/weekly/monthly/yearly. The Chinese Horoscope endpoint derives the zodiac animal from a birth year, so no sign is required there.
 
 **What languages does the API support?**
-25 languages, requested via the `lan` parameter. English is the default. Full language code table is on the [docs site](https://developers.divineapi.com/divine-api/understanding-time-zones-a-comprehensive-guide).
+25 languages, requested via the `lan` parameter. English is the default. Full language code table is on the [docs site](https://developers.divineapi.com/understanding-time-zones-a-comprehensive-guide).
 
 **What's the difference between Chinese Horoscope and the other horoscope endpoints?**
 The four Western endpoints (daily/weekly/monthly/yearly) take a tropical zodiac `sign` and a cadence. The Chinese Horoscope endpoint takes a birth year (and period), internally maps the year to a Chinese zodiac animal (Rat, Ox, Tiger, ...), then returns guidance for that animal.
@@ -375,7 +375,7 @@ Predictions are written by professional astrologers and updated continuously. Th
 
 Code samples on this page are free to copy into your own projects, no attribution required. Marketing copy, logos, and the **DivineAPI** name are © 2026 DivineAPI, all rights reserved.
 
-For the terms that govern the API service itself, see [divineapi.com/terms](https://divineapi.com/terms).
+For the terms that govern the API service itself, see [divineapi.com/terms](https://divineapi.com/terms-service).
 
 ## Contact
 
